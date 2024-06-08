@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="Images/leptir.jpeg" type="icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5133a64235.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="pages/omeni.html">O meni</a></li>
+                    <li><a href="pages/proces.html">Proces</a></li>
+                    <li><a href="#services">Radovi</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <img src="Images/jacirkus.png" alt="Inona">
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------hero-------------------------------->
+    <div class="ime">
+        <h1>Inona</h1>
+
+        <br>
+
+        
+    </div>
+    <h2 class="unicorn">"Dakle, sada kada smo se upoznali', reče Jednorog,'ako ćeš ti da veruješ u mene, i ja ću da verujem u tebe. Dogovoreno?"</h2>
+    <!---------------------------what do I do------------------------------------>
+
+    <div id="services">
+        <div class="container">
+            <h2 class="sub-title">"Počni od početka", reče Kralj veoma ozbiljno, "i nastavi dok ne dođeš do kraja: onda stani."</h2>
+            <div class="beba"><img src="Images/beba.png" alt="beba na oblaku">
+            </div>
+            <div class="ruka"><img src="Images/ruka.png" alt="ruka"></div>
+            <br>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-spider"></i>
+                    <h2>Web dizajn</h2>
+                    <p>Dizajn, kodiranje.</p>
+                    <p>(HTML, CSS, JS, Sass, Bootstrap)</p>
+                    <a href="./pages/webdesign.html">Galerija</a>
+                </div>
+                <div>
+                    <i class="fas fa-hat-wizard"></i>
+                    <h2>Dizajn</h2>
+                    <p>Ilustracije, animacije, brend i logo dizajn.</p>
+                    <p>(Illustrator, After Effects, Capcut)</p>
+                    <a href="./pages/design.html">Galerija</a>
+                </div>
+                <div>
+                    <i class="fas fa-camera"></i>
+                    <h2>Fotografija</h2>
+                    <p>Sve vrste fotografisanja i njihovo editovanje.</p>
+                    <p>(Photoshop, Lightroom)</p>
+                    <a href="./pages/photo.html">Galerija</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud-arrow-down"></i></i>
+                    <h2>Proces</h2>
+                    <p>Kako, odakle i zašto</p>
+                    <p>...</p>
+                    <a href="./pages/proces.html">Galerija</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!----------------------contact-------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title">U Metaverzumu, možemo da se sretnemo ovde:</h2>
+                    <div class="social-icons">
+                        <a href="mailto:inona.zivanovic@yahoo.com"><i class="fab fa-yahoo"></i></a>
+                        <a href="http://instagram.com/SkyNomadphotos"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/inona-z-54a819aa/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <i class="fa-solid fa-cog fa-spin"></i>
+            <i class="fa-solid fa-frog"></i>
+            <i class="fa-solid fa-cog fa-spin" style="--fa-animation-direction: reverse;"></i>
+        </div>
+        <p id="tagline">Napravljeno s ljubavlju u dalekoj, dalekoj galaksiji...</p>
+
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        const bodyEl = document.querySelector("body")
+        bodyEl.addEventListener("mousemove", (event) => {
+            const xPos = event.offsetX;
+            const yPos = event.offsetY;
+            const spanEl = document.createElement("span");
+            spanEl.style.left = xPos + "px";
+            spanEl.style.top = yPos + "px";
+            const size = Math.random() * 20;
+            spanEl.style.width = size + "px";
+            spanEl.style.height = size + "px";
+            bodyEl.appendChild(spanEl);
+            setTimeout(() => {
+                spanEl.remove();
+            }, 6000);
+        });
+        src = "index.js";
+
+
+        var track = document.getElementById('track');
+
+var controlBtn = document.getElementById('play-pause');
+
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
+    }
+}
+
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+}); 
+    </script>
+
+
+</body>
+
+</html>

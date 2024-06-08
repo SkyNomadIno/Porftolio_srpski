@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5133a64235.js" crossorigin="anonymous"></script>
+    <title>Dizajn</title>
+    <link rel="icon" href="../Images/leptir.jpeg" type="icon">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="../index.html">Početna</a></li>
+                    <li><a href="../pages/omeni.html">O meni</a></li>
+                    <li><a href="../index.html#services">Radovi</a></li>
+                    <li><a href="../index.html#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="container">
+            <video width="520" height="auto" controls src="../Images/cirkus brzi.mp4"></video>
+            <p>After Effects, Cirkus, 2024</p>
+            <img src="../Design/Frivica.png" alt="Frida, Vincent and their baby">
+            <p>Photoshop, Frida, Vinsent i njihova bebica Frivi Kahlo van Gogh, drži Pepu Prase, 2024</p>
+            <video width="520" height="auto" controls src="../Images/Zvezdana Noc sa mrakom.mp4"></video>
+            <p>After Effects, Zvezdana noć, Van Gog, 2024</p>
+            <img src="../Design/IMG_20220408_222308_816.jpg" alt="Steampunk">
+            <p>Photoshop, Steampunk, 2022</p>
+            <video width="520" height="auto" controls src="../Images/carobnica.mp4"></video>
+            <p>After Effects, Čarobnjak, 2024</p>
+            <img src="../Design/enterijer.jpg" alt="Interior">
+            <p>Photoshop, Interior, 2022</p>
+            <img src="../Images/bushido.jpg" alt="Bushido brochure">
+            <p>InDesign, Bushido brošura, prednja strana, 2024</p>
+            <img src="../Images/bushido2.jpg" alt="Bushido brochure">
+            <p>InDesign, Bushido brošura, zadnja strana, 2024</p>
+            <img src="../Images/Bushido brosura.jpg" alt="">
+            <p>InDesign, Bushido brošura mockup, 2024</p>
+            <img src="../Design/Indija magazin.png" alt="InDesign">
+            <p>InDesign, stranica časopisa. Fotografije preuzeta sa inteneta. 2024</p>
+            <img src="../Design/Jerusalim.jpg" alt="Jerusalem">
+            <p>Photoshop, Am Israel Chai! 2022</p>
+            <img src="../Design/know.jpg" alt="Know Yourself, Youth Festival poster">
+            <p>Photoshop, poster za Festival Mladih u Rumuniji, 2022</p>
+            <img src="../Design/Layer 0.jpg" alt="Photoshop">
+            <p>Photoshop, Zaštita, 2022</p>
+            <img src="../Design/policija.jpg" alt="Illustartor, Character Design">
+            <p>Illustrator, karakter dizajn, 2023</p>
+            <img src="../Design/krozprozor.jpg" alt="Collage">
+            <p>Kolaž, Kroz prozor, 2022</p>
+            <img src="../Design/Dobro _ lose.jpg" alt="Collage">
+            <p>Kolaž, Suprotnosti, 2022</p>
+            <img src="../Design/Mockup za reklamni oglas JPG.jpg" alt="Photoshop, Plazma biscuit">
+            <p>Photoshop, reklama za Plazmu keks u časopisu, 2022</p>
+            <img src="../Images/Reklamni oglas JPG.jpg" alt="Plazma">
+            <p>Photoshop, Plazma keks, 2022</p>
+            <br>
+            <br>
+            <br>
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h2 class="sub-title">U Metaverzumu, možemo da se sretnemo ovde:</h2>
+                            <div class="social-icons">
+                                <a href="mailto:inona.zivanovic@yahoo.com"><i class="fab fa-yahoo"></i></a>
+                                <a href="http://instagram.com/SkyNomadphotos"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/inona-z-54a819aa/"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <i class="fa-solid fa-cog fa-spin"></i>
+                    <i class="fa-solid fa-frog"></i>
+                    <i class="fa-solid fa-cog fa-spin" style="--fa-animation-direction: reverse;"></i>
+                </div>
+                <p id="tagline">Napravljeno s ljubavlju u dalekoj, dalekoj galaksiji...</p>
+            </div>
+        </div>
+</body>
+
+
+<script>
+    const bodyEl = document.querySelector("body")
+    bodyEl.addEventListener("mousemove", (event) => {
+        const xPos = event.offsetX;
+        const yPos = event.offsetY;
+        const spanEl = document.createElement("span");
+        spanEl.style.left = xPos + "px";
+        spanEl.style.top = yPos + "px";
+        const size = Math.random() * 20;
+        spanEl.style.width = size + "px";
+        spanEl.style.height = size + "px";
+        bodyEl.appendChild(spanEl);
+        setTimeout(() => {
+            spanEl.remove();
+        }, 6000);
+    });
+    src = "index.js";
+</script>
+
+
+</html>
